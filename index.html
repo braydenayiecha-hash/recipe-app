@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fridge2Meal - AI Recipe Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🍳 Fridge2Meal</h1>
+      <p>Enter what's in your fridge → get recipes</p>
+    </header>
+
+    <div class="card">
+      <label>My Ingredients</label>
+      <div class="input-row">
+        <input id="ingredientInput" placeholder="e.g. eggs, rice, tomatoes..." />
+        <button id="addBtn">Add</button>
+      </div>
+      <div id="tags" class="tags"></div>
+
+      <div class="filters">
+        <select id="diet">
+          <option value="any">Any diet</option>
+          <option value="vegetarian">Vegetarian</option>
+          <option value="vegan">Vegan</option>
+          <option value="high-protein">High-protein</option>
+        </select>
+        <select id="time">
+          <option value="60">Any time</option>
+          <option value="15">Under 15 min</option>
+          <option value="30">Under 30 min</option>
+        </select>
+      </div>
+
+      <div class="btn-row">
+        <button id="generateBtn" class="primary">Generate Recipes ✨</button>
+        <button id="surpriseBtn">Surprise Me 🎲</button>
+        <button id="clearBtn" class="ghost">Clear</button>
+      </div>
+    </div>
+
+    <div id="results" class="results"></div>
+
+    <div class="card hidden" id="shoppingCard">
+      <h3>🛒 Shopping List</h3>
+      <ul id="shoppingList"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
